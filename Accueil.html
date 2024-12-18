@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Produit Corse - Charcuterie Traditionnelle</title>
+    <style>
+        :root {
+            --primary-color: #ff4d4d;
+            --secondary-color: #000000;
+            --accent-color: #ffffff;
+            --font-main: 'Montserrat', sans-serif;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+        body {
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .header {
+            background-color: var(--accent-color);
+            width: 100%;
+            z-index: 1000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            background-color: #000000;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            transition: transform 0.3s ease;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            background-color: var(--secondary-color);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0;
+        }
+
+        .nav-menu a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero-section {
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('ville.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 5%;
+            margin: 0;
+        }
+
+        .product-card {
+            background: var(--accent-color);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: var(--secondary-color);
+            color: var(--accent-color);
+            padding: 40px 20px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .contact-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="saucisseco.jpg" alt="Produit Corse Logo" class="logo">
+        </div>
+        <nav class="nav-menu">
+    <a href="#accueil.html">Accueil</a>
+    <a href="#produits">Nos Produits</a>
+    <a href="savoir-faire.html">Savoir-Faire</a>
+    <a href="#boutique">Boutique</a>
+    <a href="#contact">Contact</a>
+</nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>L'Excellence de la Charcuterie Corse</h1>
+            <p>Découvrez nos produits artisanaux élaborés selon la tradition ancestrale</p>
+        </div>
+    </section>
+
+    <section id="produits" class="product-grid">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('figatellu.jpg')"></div>
+            <div class="product-info">
+                <h3>Figatellu</h3>
+                <p>Notre figatellu traditionnel, séché au vent corse</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('coppa.jpg')"></div>
+            <div class="product-info">
+                <h3>Coppa</h3>
+                <p>Une coppa affinée aux herbes du maquis</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('lonzu.jpg')"></div>
+            <div class="product-info">
+                <h3>Lonzu</h3>
+                <p>Le lonzu traditionnel, notre fierté</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="contact-section">
+            <div>
+                <h3>Contact</h3>
+                <p>Email: contact@produitcorse.fr</p>
+                <p>Tél: 04.95.XX.XX.XX</p>
+            </div>
+            <div>
+                <h3>Adresse</h3>
+                <p>Route de Bastia</p>
+                <p>20200 Bastia, Corse</p>
+            </div>
+            <div>
+                <h3>Horaires</h3>
+                <p>Lundi - Samedi</p>
+                <p>9h00 - 19h00</p>
+            </div>
+        </div>
+        <p>&copy; 2024 Produit Corse - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

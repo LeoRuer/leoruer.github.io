@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Notre Savoir-Faire - Produit Corse</title>
+    <style>
+        :root {
+            --primary-color: #ff4d4d;
+            --secondary-color: #000000;
+            --accent-color: #ffffff;
+            --font-main: 'Montserrat', sans-serif;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+        body {
+            font-family: var(--font-main);
+            margin: 0;
+            padding: 0;
+            background-image: url('cave.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .header {
+            width: 100%;
+            z-index: 1000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            background-color: #000000;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            transition: transform 0.3s ease;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .nav-menu {
+            background-color: var(--secondary-color);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0;
+        }
+
+        .nav-menu a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .team-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 30px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+        }
+
+        .team-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--secondary-color);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .member-info h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .member-info h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .member-info p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .history-section {
+            margin-top: 50px;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .history-title {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .history-content {
+            line-height: 1.8;
+            text-align: justify;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .history-quote {
+            font-style: italic;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+
+        .medal-info {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(255, 77, 77, 0.1);
+            border-radius: 10px;
+        }
+
+        .cold-war-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid var(--primary-color);
+        }
+        
+        .secret-doc {
+            background-color: rgba(255, 77, 77, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="saucisseco.jpg" alt="Produit Corse Logo" class="logo">
+        </div>
+        <nav class="nav-menu">
+            <a href="accueil.html">Accueil</a>
+            <a href="#produits">Nos Produits</a>
+            <a href="savoir-faire.html">Savoir-Faire</a>
+            <a href="#boutique">Boutique</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="team-section">
+        <div class="team-title">
+            <h1>Les Maîtres Fondateurs de 1919</h1>
+            <p>Découvrez l'histoire de nos quatre maîtres artisans corses qui, au lendemain de la Première Guerre mondiale, quittèrent leur île pour apporter leur savoir-faire ancestral à la France continentale. Fondée en 1919, Saucisse&Co est née de leur vision commune : mettre l'excellence de la charcuterie corse au service de la reconstruction nationale.</p>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="pdp/rom.jpg" alt="Romain" class="member-image">
+                <div class="member-info">
+                    <h3>Romain Santoni</h3>
+                    <h4>Maître Sécheur Fondateur</h4>
+                    <p>Originaire de Bastia, Romain fut le pionnier des techniques de séchage. En 1919, il quitta sa Corse natale avec la vision de nourrir une France meurtrie par la guerre, apportant avec lui les secrets ancestraux du séchage traditionnel corse.</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="pdp/mat.jpg" alt="Mathieu" class="member-image">
+                <div class="member-info">
+                    <h3>Mathieu Albertini</h3>
+                    <h4>Maître des Épices Fondateur</h4>
+                    <p>Né à Ajaccio, Mathieu était le gardien des saveurs corses. En rejoignant l'aventure Saucisse&Co en 1919, il apporta avec lui les précieuses herbes du maquis et les recettes séculaires de sa famille, contribuant à raviver les papilles des Français d'après-guerre.</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="pdp/luc.jpg" alt="Lucas" class="member-image">
+                <div class="member-info">
+                    <h3>Lucas Rossi</h3>
+                    <h4>Maître Affineur Fondateur</h4>
+                    <p>Descendant d'une lignée d'affineurs de Corte, Lucas quitta son île en 1919 avec la mission de perpétuer l'excellence corse. Son expertise dans l'affinage fut cruciale pour maintenir la qualité des produits pendant la reconstruction de la France.</p>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img src="pdp/leo.jpg" alt="Léo" class="member-image">
+                <div class="member-info">
+                    <h3>Léo Guidicelli</h3>
+                    <h4>Maître Charcutier Fondateur</h4>
+                    <p>Originaire de Porto-Vecchio, Léo était le visionnaire et le leader naturel du groupe. En 1919, après avoir servi dans l'armée française pendant la Grande Guerre, il fédéra ses trois compagnons autour du projet Saucisse&Co. Sa passion pour la charcuterie traditionnelle et son sens aigu des affaires ont permis de transformer une modeste entreprise familiale en une institution respectée de la gastronomie corse.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h2 class="history-title">L'Épopée Héroïque de la Seconde Guerre Mondiale</h2>
+            
+            <div class="history-content">
+                <p>Entre 1939 et 1945, Saucisse&Co s'est illustrée dans l'un des chapitres les plus héroïques de son histoire. Les quatre fondateurs, déjà reconnus pour leur engagement lors de la Grande Guerre, n'ont pas hésité à mettre leur entreprise au service de la Résistance française.</p>
+
+                <p>Sous couvert de leur activité de charcuterie, ils ont développé un vaste réseau d'approvisionnement clandestin. Leurs camions de livraison, qui sillonnaient la France, transportaient bien plus que de la charcuterie : ils acheminaient des messages codés, des armes, et ravitaillaient les maquis de la Résistance.</p>
+
+                <div class="history-quote">
+                    "Ces artisans corses ont transformé leur savoir-faire ancestral en arme de résistance. Chaque saucisson dissimulait un message, chaque livraison était une mission, chaque client pouvait être un contact."
+                </div>
+
+                <p>Leur contribution fut si significative que le Général de Gaulle, lors d'une visite secrète depuis Londres en 1944, fit le déplacement pour les rencontrer personnellement. Impressionné par leur courage et leur dévouement, il leur promit une reconnaissance qui ne tarda pas à venir.</p>
+
+                <div class="medal-info">
+                    <h3>Le 8 mai 1945</h3>
+                    <p>Les quatre fondateurs de Saucisse&Co furent décorés de la Légion d'Honneur par le Général de Gaulle lui-même, pour "actes exceptionnels de bravoure et de dévouement au service de la Résistance française".</p>
+                </div>
+            </div>
+
+            <div class="cold-war-section">
+                <h2 class="history-title">L'Affaire Castro : Le Complot Déjoué de 1962</h2>
+                
+                <div class="history-content">
+                    <p>En pleine crise des missiles de Cuba, les quatre maîtres de Saucisse&Co, alors septuagénaires mais toujours actifs, ont joué un rôle crucial dans le déjouement d'une opération secrète qui aurait pu avoir des conséquences catastrophiques.</p>
+
+                    <div class="secret-doc">
+                        DOCUMENT DÉCLASSIFIÉ - 1962
+                        Opération "Dormant Rouge"
+                        Classification : TOP SECRET
+                    </div>
+
+                    <p>Grâce à leur réseau de distribution qui s'étendait désormais jusqu'aux Caraïbes, les quatre fondateurs ont découvert un plan impliquant des agents dormants cubains. Ces agents devaient infiltrer les bases militaires françaises et détourner des missiles à capacité nucléaire pour les rediriger vers Cuba.</p>
+
+                    <div class="history-quote">
+                        "La charcuterie voyage, les secrets aussi. Nos livraisons nous ont permis d'identifier les agents infiltrés." - Léo Guidicelli, 1962
+                    </div>
+
+                    <p>Utilisant leur expérience de la Résistance, ils ont mis en place un système de contre-espionnage sophistiqué. Leurs camions de livraison, équipés de technologies de surveillance avancées, ont permis d'identifier et de suivre les mouvements des agents cubains sur le territoire français.</p>
+
+                    <p>Le 15 octobre 1962, alors que le monde était au bord du précipice nucléaire, les quatre maîtres ont transmis des informations cruciales aux services secrets français, permettant l'arrestation de 17 agents dormants et le démantèlement complet du réseau.</p>
+
+                    <div class="medal-info">
+                        <h3>Reconnaissance Secrète</h3>
+                        <p>Cette opération resta classifiée jusqu'en 2015. Les quatre fondateurs reçurent une décoration secrète des services de renseignement français, qui ne fut révélée qu'après leur disparition.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
